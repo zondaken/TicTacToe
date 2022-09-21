@@ -1,0 +1,15 @@
+E:\Daten\Informatik\Programmierung (Neu)\C#\RiderProjects\TicTacToe\TicTacToe\bin\Debug\net7.0\TicTacToe.exe
+E:\Daten\Informatik\Programmierung (Neu)\C#\RiderProjects\TicTacToe\TicTacToe\bin\Debug\net7.0\TicTacToe.deps.json
+E:\Daten\Informatik\Programmierung (Neu)\C#\RiderProjects\TicTacToe\TicTacToe\bin\Debug\net7.0\TicTacToe.runtimeconfig.json
+E:\Daten\Informatik\Programmierung (Neu)\C#\RiderProjects\TicTacToe\TicTacToe\bin\Debug\net7.0\TicTacToe.dll
+E:\Daten\Informatik\Programmierung (Neu)\C#\RiderProjects\TicTacToe\TicTacToe\bin\Debug\net7.0\TicTacToe.pdb
+E:\Daten\Informatik\Programmierung (Neu)\C#\RiderProjects\TicTacToe\TicTacToe\obj\Debug\net7.0\TicTacToe.csproj.AssemblyReference.cache
+E:\Daten\Informatik\Programmierung (Neu)\C#\RiderProjects\TicTacToe\TicTacToe\obj\Debug\net7.0\TicTacToe.GeneratedMSBuildEditorConfig.editorconfig
+E:\Daten\Informatik\Programmierung (Neu)\C#\RiderProjects\TicTacToe\TicTacToe\obj\Debug\net7.0\TicTacToe.AssemblyInfoInputs.cache
+E:\Daten\Informatik\Programmierung (Neu)\C#\RiderProjects\TicTacToe\TicTacToe\obj\Debug\net7.0\TicTacToe.AssemblyInfo.cs
+E:\Daten\Informatik\Programmierung (Neu)\C#\RiderProjects\TicTacToe\TicTacToe\obj\Debug\net7.0\TicTacToe.csproj.CoreCompileInputs.cache
+E:\Daten\Informatik\Programmierung (Neu)\C#\RiderProjects\TicTacToe\TicTacToe\obj\Debug\net7.0\TicTacToe.dll
+E:\Daten\Informatik\Programmierung (Neu)\C#\RiderProjects\TicTacToe\TicTacToe\obj\Debug\net7.0\refint\TicTacToe.dll
+E:\Daten\Informatik\Programmierung (Neu)\C#\RiderProjects\TicTacToe\TicTacToe\obj\Debug\net7.0\TicTacToe.pdb
+E:\Daten\Informatik\Programmierung (Neu)\C#\RiderProjects\TicTacToe\TicTacToe\obj\Debug\net7.0\TicTacToe.genruntimeconfig.cache
+E:\Daten\Informatik\Programmierung (Neu)\C#\RiderProjects\TicTacToe\TicTacToe\obj\Debug\net7.0\ref\TicTacToe.dll
