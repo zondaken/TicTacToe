@@ -1,6 +1,6 @@
 ﻿namespace TicTacToe;
 
-public sealed class Player : Object
+public sealed class Player : IPlayer
 {
     private string _toString;
 

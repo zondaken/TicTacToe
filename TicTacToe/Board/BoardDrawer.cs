@@ -13,6 +13,7 @@ public sealed class BoardDrawer : IBoardDrawer
     
     public void Draw()
     {
+        Console.Clear();
         DrawExampleBoard();
         Console.WriteLine();
         DrawCurrentBoard();
@@ -20,24 +21,28 @@ public sealed class BoardDrawer : IBoardDrawer
 
     private void DrawExampleBoard()
     {
-        Console.WriteLine(" 1 | 2 | 3 \n" +
-                          "===========\n" +
-                          " 4 | 5 | 6 \n" +
-                          "===========\n" +
-                          " 7 | 8 | 9 \n");
+        Console.WriteLine("Example:");
+        
+        for (int row = 0; row < _board.Rows; row++)
+        {
+            var numbers = Enumerable.Range(row * _board.Cols + 1, _board.Cols);
+            Console.Write(" ");
+            Console.WriteLine(string.Join(" | ", numbers));
+            Console.WriteLine(new string('=', _board.Cols * 3 + 2));
+        }
     }
 
     private void DrawCurrentBoard()
     {
-        for (uint row = 0; row < _board.Rows; row++)
+        for (int row = 0; row < _board.Rows; row++)
         {
-            ImmutableArray<Player?> players = _board.GetRow(row).ToImmutableArray();
+            ImmutableArray<IPlayer?> players = _board.GetRow(row).ToImmutableArray();
 
             Console.Write(" ");
 
             for (int i = 0; i < players.Length; i++)
             {
-                Player? player = players[i];
+                IPlayer? player = players[i];
 
                 Console.Write(player?.ToString() ?? " ");
 
@@ -51,7 +56,7 @@ public sealed class BoardDrawer : IBoardDrawer
 
             if (row + 1 < _board.Rows)
             {
-                Console.WriteLine(new string('=', (int) (_board.Rows * 3) + 2));
+                Console.WriteLine(new string('=', _board.Rows * 3 + 2));
             }
         }
     }

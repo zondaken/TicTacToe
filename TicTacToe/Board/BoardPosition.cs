@@ -2,18 +2,18 @@
 
 public struct BoardPosition : IBoardPosition
 {
-    public uint Row { get; }
-    public uint Col { get; }
-    public uint Index { get; }
+    public int Row { get; }
+    public int Col { get; }
+    public int Index { get; }
 
-    public BoardPosition(IBoard board, uint row, uint col)
+    public BoardPosition(IBoard board, int row, int col)
     {
         Row = row;
         Col = col;
         Index = Row * board.Cols + col;
     }
 
-    public BoardPosition(IBoard board, uint index)
+    public BoardPosition(IBoard board, int index)
     {
         // index = row * Cols + col
         // col = index - (row * Cols)
