@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
 namespace TicTacToe
 {
@@ -16,11 +15,13 @@ namespace TicTacToe
         public int Count => Rows * Cols;
 
         private readonly IPlayer?[] _board;
+        private readonly IWinCheck _winCheck;
 
         public Board(int size)
         {
             Size = size;
             _board = new IPlayer?[Count];
+            _winCheck = new WinCheck(this);
         }
 
         public IPlayer? this[IBoardPosition position]
@@ -50,6 +51,11 @@ namespace TicTacToe
             Debug.Assert(end < int.MaxValue);
 
             return _board[start..end];
+        }
+
+        public bool CheckWin(out IPlayer? player)
+        {
+            return _winCheck.HasWon(out player);
         }
     }
 }

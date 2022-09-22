@@ -23,7 +23,6 @@ namespace TicTacToe
             };
 
             _board = new Board(3);
-            InitializeBoard();
 
             _drawer = new BoardDrawer(_board);
 
@@ -57,18 +56,6 @@ namespace TicTacToe
             Console.WriteLine();
             Console.WriteLine("GAME OVER");
             Console.WriteLine("Turns: {0}", _turnCount);
-        }
-
-        private void InitializeBoard()
-        {
-            for (int row = 0; row < _board.Rows; row++)
-            {
-                for (int col = 0; col < _board.Cols; col++)
-                {
-                    var position = new BoardPosition(_board, row, col);
-                    _board[position] = null;
-                }
-            }
         }
 
         private IBoardPosition GetInput()

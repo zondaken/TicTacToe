@@ -1,4 +1,5 @@
 ﻿using System;
+using TicTacToe.MVC;
 using TicTacToe.Unrelated;
 
 namespace TicTacToe
@@ -8,8 +9,13 @@ namespace TicTacToe
     {
         public static void Main(string[] args)
         {
-            IGame game = new Game();
-            game.Run();
+            var board = new Board(3);
+            var model = new Model(board);
+            
+            var view = new View(model);
+            
+            var controller = new Controller(model, view);
+            controller.Run();
         }
     }
 }

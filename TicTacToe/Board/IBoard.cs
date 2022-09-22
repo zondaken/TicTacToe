@@ -12,5 +12,6 @@ namespace TicTacToe
         IPlayer? this[int index] { get; set; }
         IPlayer? this[int row, int col] { get; set; }
         IEnumerable<IPlayer?> GetRow(int row);
+        bool CheckWin(out IPlayer? player);
     }
 }
