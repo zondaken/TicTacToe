@@ -29,6 +29,18 @@ namespace TicTacToe
             set => _board[position.Index] = value;
         }
 
+        public IPlayer? this[int index]
+        {
+            get => this[new BoardPosition(this, index)];
+            set => this[new BoardPosition(this, index)] = value;
+        }
+
+        public IPlayer? this[int row, int col]
+        {
+            get => this[new BoardPosition(this, row, col)];
+            set => this[new BoardPosition(this, row, col)] = value;
+        }
+
         public IEnumerable<IPlayer?> GetRow(int row)
         {
             var start = row * Cols;

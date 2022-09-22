@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Immutable;
 using System.Linq;
-using TicTacToe;
 
 namespace TicTacToe
 {
@@ -28,10 +27,10 @@ namespace TicTacToe
 
             for (int row = 0; row < _board.Rows; row++)
             {
-                var numbers = Enumerable.Range(row * _board.Cols + 1, _board.Cols);
+                var numbers = Enumerable.Range(row * _board.Cols, _board.Cols);
                 Console.Write(" ");
                 Console.WriteLine(string.Join(" | ", numbers));
-                Console.WriteLine(new string('=', _board.Cols * 3 + 2));
+                if(row + 1 < _board.Rows) Console.WriteLine(new string('=', _board.Cols * 3 + 2));
             }
         }
 

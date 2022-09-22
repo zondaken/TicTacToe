@@ -54,9 +54,9 @@ namespace TicTacToe
                 if (_winCheck.HasWon(out _)) break;
             }
 
-            _drawer.Draw();
             Console.WriteLine();
             Console.WriteLine("GAME OVER");
+            Console.WriteLine("Turns: {0}", _turnCount);
         }
 
         private void InitializeBoard()
@@ -77,9 +77,9 @@ namespace TicTacToe
             string input = Console.ReadLine() ?? throw new ArgumentException("no input");
 
             int index = int.Parse(input);
-            Debug.Assert(index - 1 < _board.Count);
+            Debug.Assert(index < _board.Count);
 
-            var position = new BoardPosition(_board, index - 1);
+            var position = new BoardPosition(_board, index);
 
             return position;
         }
