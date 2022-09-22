@@ -1,6 +1,7 @@
-namespace TicTacToe;
-
-public interface IGame
+namespace TicTacToe
 {
-    void Run();
+    public interface IGame
+    {
+        void Run();
+    }
 }

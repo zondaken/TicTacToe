@@ -1,16 +1,17 @@
-﻿namespace TicTacToe;
-
-public sealed class Player : IPlayer
+﻿namespace TicTacToe
 {
-    private string _toString;
-
-    public Player(string toString)
+    public sealed class Player : IPlayer
     {
-        _toString = toString;
-    }
+        private string _toString;
 
-    public override string? ToString()
-    {
-        return _toString;
+        public Player(string toString)
+        {
+            _toString = toString;
+        }
+
+        public override string? ToString()
+        {
+            return _toString;
+        }
     }
 }

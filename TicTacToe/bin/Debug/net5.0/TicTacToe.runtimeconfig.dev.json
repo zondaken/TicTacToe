@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\marino.zirks\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\marino.zirks\\.nuget\\packages"
+    ]
+  }
+}

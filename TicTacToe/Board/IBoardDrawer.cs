@@ -1,6 +1,7 @@
-namespace TicTacToe;
-
-public interface IBoardDrawer
+namespace TicTacToe
 {
-    void Draw();
+    public interface IBoardDrawer
+    {
+        void Draw();
+    }
 }

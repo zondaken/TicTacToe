@@ -1,16 +1,15 @@
-﻿using TicTacToe.Unrelated;
+﻿using System;
+using TicTacToe.Unrelated;
 
-namespace TicTacToe;
-
-public static class Program
+namespace TicTacToe
 {
-    public static void Main(string[] args)
+
+    public static class Program
     {
-        var t = new Temperature();
-        t.Celsius = 25;
-        Console.WriteLine(t.Fahrenheit);
-        
-        IGame game = new Game();
-        //game.Run();
+        public static void Main(string[] args)
+        {
+            IGame game = new Game();
+            game.Run();
+        }
     }
 }

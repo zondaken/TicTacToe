@@ -1,21 +1,23 @@
 ﻿using System.Diagnostics;
+using TicTacToe;
 
-namespace TicTacToe;
-
-public class WinCheck : IWinCheck
+namespace TicTacToe
 {
-    private readonly IBoard _board;
-
-    public WinCheck(IBoard board)
+    public class WinCheck : IWinCheck
     {
-        _board = board;
-        
-        Debug.Assert(_board.Rows == _board.Cols);
-    }
+        private readonly IBoard _board;
 
-    public bool HasWon(out IPlayer? player)
-    {
-        player = null;
-        return false;
+        public WinCheck(IBoard board)
+        {
+            _board = board;
+
+            Debug.Assert(_board.Rows == _board.Cols);
+        }
+
+        public bool HasWon(out IPlayer? player)
+        {
+            player = null;
+            return false;
+        }
     }
 }

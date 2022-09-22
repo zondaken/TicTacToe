@@ -1,10 +1,14 @@
-﻿namespace TicTacToe;
+﻿using System.Collections.Generic;
+using TicTacToe;
 
-public interface IBoard
+namespace TicTacToe
 {
-    int Rows { get; }
-    int Cols { get; }
-    int Count { get; }
-    IPlayer? this[IBoardPosition position] { get; set; }
-    IEnumerable<IPlayer?> GetRow(int row);
+    public interface IBoard
+    {
+        int Rows { get; }
+        int Cols { get; }
+        int Count { get; }
+        IPlayer? this[IBoardPosition position] { get; set; }
+        IEnumerable<IPlayer?> GetRow(int row);
+    }
 }

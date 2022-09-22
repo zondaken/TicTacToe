@@ -1,8 +1,9 @@
-﻿namespace TicTacToe;
-
-public interface IBoardPosition
+﻿namespace TicTacToe
 {
-    int Row { get; }
-    int Col { get; }
-    int Index { get; }
+    public interface IBoardPosition
+    {
+        int Row { get; }
+        int Col { get; }
+        int Index { get; }
+    }
 }

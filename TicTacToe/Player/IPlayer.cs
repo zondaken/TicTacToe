@@ -1,5 +1,6 @@
-﻿namespace TicTacToe;
-
-public interface IPlayer
+﻿namespace TicTacToe
 {
+    public interface IPlayer
+    {
+    }
 }

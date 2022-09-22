@@ -1,6 +1,9 @@
-﻿namespace TicTacToe;
+﻿using TicTacToe;
 
-public interface IWinCheck
+namespace TicTacToe
 {
-    bool HasWon(out IPlayer? player);
+    public interface IWinCheck
+    {
+        bool HasWon(out IPlayer? player);
+    }
 }
