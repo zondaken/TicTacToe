@@ -1,11 +1,9 @@
-﻿using System.Diagnostics;
-
-namespace TicTacToe.MVC;
+﻿namespace TicTacToe.MVC.ViewNS;
 
 public class View
 {
     private readonly Model _model;
-    private readonly IBoardDrawer _drawer;
+    private readonly BoardDrawer _drawer;
 
     public event Action<string>? InputSubmitted;
 

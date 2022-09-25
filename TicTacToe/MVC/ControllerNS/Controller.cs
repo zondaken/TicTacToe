@@ -1,10 +1,10 @@
 ﻿using System.Diagnostics;
+using TicTacToe.MVC.ViewNS;
 
-namespace TicTacToe.MVC;
+namespace TicTacToe.MVC.ControllerNS;
 
 public class Controller
 {
-    // ReSharper disable once PrivateFieldCanBeConvertedToLocalVariable
     private readonly Model _model;
     private readonly View _view;
 

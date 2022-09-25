@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Immutable;
-using System.Linq;
+﻿using System.Collections.Immutable;
 
-namespace TicTacToe
+namespace TicTacToe.MVC.ViewNS
 {
-    public sealed class BoardDrawer : IBoardDrawer
+    public sealed class BoardDrawer
     {
         private readonly IBoard _board;
 

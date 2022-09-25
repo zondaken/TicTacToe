@@ -1,5 +1,7 @@
 ﻿using System;
 using TicTacToe.MVC;
+using TicTacToe.MVC.ControllerNS;
+using TicTacToe.MVC.ViewNS;
 using TicTacToe.Unrelated;
 
 namespace TicTacToe

@@ -11,4 +11,8 @@
       <None Remove="TicTacToe.csproj.DotSettings" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Game" />
+    </ItemGroup>
+
 </Project>
