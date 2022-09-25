@@ -2,16 +2,17 @@
 
 public class Model
 {
-    public IBoard Board { get; }
-    public int TurnCount { get; set; }
+    public IBoard? Board { get; set; } = null;
+    public int TurnCount { get; set; } = 0;
     public IPlayer[] Players { get; }
-    public int CurrentPlayer { get; set; }
+    public int CurrentPlayer { get; set; } = 0;
     
-    public Model(IBoard board)
+    public Model()
     {
-        Board = board;
-        TurnCount = 0;
-        Players = new IPlayer[] { new Player("X"), new Player("O") };
-        CurrentPlayer = 0;
+        Players = new IPlayer[]
+        {
+            new Player("X"), 
+            new Player("O")
+        };
     }
 }

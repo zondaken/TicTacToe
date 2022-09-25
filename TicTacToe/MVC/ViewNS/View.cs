@@ -1,4 +1,6 @@
-﻿namespace TicTacToe.MVC.ViewNS;
+﻿using System.Diagnostics;
+
+namespace TicTacToe.MVC.ViewNS;
 
 public class View
 {
@@ -9,8 +11,10 @@ public class View
 
     public View(Model model)
     {
+        Debug.Assert(model.Board != null);
+        
         _model = model;
-        _drawer = new BoardDrawer(model.Board);
+        _drawer = new BoardDrawer(_model.Board);
     }
 
     public void Render()
