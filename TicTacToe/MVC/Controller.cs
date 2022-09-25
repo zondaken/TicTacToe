@@ -13,20 +13,7 @@ public class Controller
         _model = model;
     
         _view = view;
-        _view.InputSubmitted += input =>
-        {
-            var iPosition = int.Parse(input);
-            if (iPosition < 0 || iPosition >= _model.Board.Count) return;
-
-            IBoardPosition pPosition = new BoardPosition(_model.Board, iPosition);
-
-            if (_model.Board[pPosition] == null)
-            {
-                _model.Board[pPosition] = _model.Players[_model.CurrentPlayer];
-                _model.CurrentPlayer = (_model.CurrentPlayer + 1) % _model.Players.Length;
-                _model.TurnCount++;
-            }
-        };
+        _view.InputSubmitted += OnInputSubmitted;
     }
 
     public void Run()
@@ -43,6 +30,21 @@ public class Controller
             
             // tie
             if (_model.TurnCount >= _model.Board.Count) break;
+        }
+    }
+
+    private void OnInputSubmitted(string input)
+    {
+        int iPosition = int.Parse(input);
+        if (iPosition < 0 || iPosition >= _model.Board.Count) return;
+
+        IBoardPosition pPosition = new BoardPosition(_model.Board, iPosition);
+
+        if (_model.Board[pPosition] == null)
+        {
+            _model.Board[pPosition] = _model.Players[_model.CurrentPlayer];
+            _model.CurrentPlayer = (_model.CurrentPlayer + 1) % _model.Players.Length;
+            _model.TurnCount++;
         }
     }
 }
