@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using TicTacToe.MVC.ModelNS;
 using TicTacToe.MVC.ViewNS;
 
 namespace TicTacToe.MVC.ControllerNS;

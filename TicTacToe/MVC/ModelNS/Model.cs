@@ -1,4 +1,4 @@
-﻿namespace TicTacToe.MVC;
+﻿namespace TicTacToe.MVC.ModelNS;
 
 public class Model
 {
