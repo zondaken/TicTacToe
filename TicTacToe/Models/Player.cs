@@ -1,6 +1,6 @@
-﻿namespace TicTacToe
+﻿namespace TicTacToe.Models
 {
-    public sealed class Player : IPlayer
+    public sealed class Player
     {
         private string _toString;
 

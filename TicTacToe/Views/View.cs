@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
-using TicTacToe.MVC.ModelNS;
+using TicTacToe.Models;
 
-namespace TicTacToe.MVC.ViewNS;
+namespace TicTacToe.Views;
 
 public class View
 {

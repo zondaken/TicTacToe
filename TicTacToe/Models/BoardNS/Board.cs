@@ -1,48 +1,48 @@
 ﻿using System.Diagnostics;
 
-namespace TicTacToe
+namespace TicTacToe.Models.BoardNS
 {
     /*
      * Assumptions:
      * - board is quadratic
      */
 
-    public sealed class Board : IBoard
+    public sealed class Board
     {
         public int Size { get; }
         public int Rows => Size;
         public int Cols => Size;
         public int Count => Rows * Cols;
 
-        private readonly IPlayer?[] _board;
-        private readonly IWinCheck _winCheck;
+        private readonly Player?[] _board;
+        private readonly WinCheck _winCheck;
 
         public Board(int size)
         {
             Size = size;
-            _board = new IPlayer?[Count];
+            _board = new Player?[Count];
             _winCheck = new WinCheck(this);
         }
 
-        public IPlayer? this[IBoardPosition position]
+        public Player? this[BoardPosition position]
         {
             get => _board[position.Index];
             set => _board[position.Index] = value;
         }
 
-        public IPlayer? this[int index]
+        public Player? this[int index]
         {
             get => this[new BoardPosition(this, index)];
             set => this[new BoardPosition(this, index)] = value;
         }
 
-        public IPlayer? this[int row, int col]
+        public Player? this[int row, int col]
         {
             get => this[new BoardPosition(this, row, col)];
             set => this[new BoardPosition(this, row, col)] = value;
         }
 
-        public IEnumerable<IPlayer?> GetRow(int row)
+        public IEnumerable<Player?> GetRow(int row)
         {
             var start = row * Cols;
             var end = (row + 1) * Cols;
@@ -53,7 +53,7 @@ namespace TicTacToe
             return _board[start..end];
         }
 
-        public bool CheckWin(out IPlayer? player)
+        public bool CheckWin(out Player? player)
         {
             return _winCheck.HasWon(out player);
         }

@@ -1,19 +1,19 @@
-﻿namespace TicTacToe
+﻿namespace TicTacToe.Models.BoardNS
 {
-    public struct BoardPosition : IBoardPosition
+    public struct BoardPosition
     {
         public int Row { get; }
         public int Col { get; }
         public int Index { get; }
 
-        public BoardPosition(IBoard board, int row, int col)
+        public BoardPosition(Board board, int row, int col)
         {
             Row = row;
             Col = col;
             Index = Row * board.Cols + col;
         }
 
-        public BoardPosition(IBoard board, int index)
+        public BoardPosition(Board board, int index)
         {
             // index = row * Cols + col
             // col = index - (row * Cols)

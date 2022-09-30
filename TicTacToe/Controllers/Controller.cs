@@ -1,8 +1,9 @@
 ﻿using System.Diagnostics;
-using TicTacToe.MVC.ModelNS;
-using TicTacToe.MVC.ViewNS;
+using TicTacToe.Models;
+using TicTacToe.Models.BoardNS;
+using TicTacToe.Views;
 
-namespace TicTacToe.MVC.ControllerNS;
+namespace TicTacToe.Controllers;
 
 public class Controller
 {
@@ -24,7 +25,7 @@ public class Controller
             _view.Render();
 
             // win
-            if (_model.Board.CheckWin(out IPlayer? player))
+            if (_model.Board.CheckWin(out Player? player))
             {
                 Debug.Assert(player != null); // if check returns true, player will be non-null
             }
@@ -39,7 +40,7 @@ public class Controller
         int iPosition = int.Parse(input);
         if (iPosition < 0 || iPosition >= _model.Board.Count) return;
 
-        IBoardPosition pPosition = new BoardPosition(_model.Board, iPosition);
+        BoardPosition pPosition = new BoardPosition(_model.Board, iPosition);
 
         if (_model.Board[pPosition] == null)
         {

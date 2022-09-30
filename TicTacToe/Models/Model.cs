@@ -1,15 +1,17 @@
-﻿namespace TicTacToe.MVC.ModelNS;
+﻿using TicTacToe.Models.BoardNS;
+
+namespace TicTacToe.Models;
 
 public class Model
 {
-    public IBoard? Board { get; set; } = null;
+    public Board Board { get; set; } = null!;
     public int TurnCount { get; set; } = 0;
-    public IPlayer[] Players { get; }
+    public Player[] Players { get; }
     public int CurrentPlayer { get; set; } = 0;
     
     public Model()
     {
-        Players = new IPlayer[]
+        Players = new Player[]
         {
             new Player("X"), 
             new Player("O")

@@ -1,12 +1,14 @@
 ﻿using System.Collections.Immutable;
+using TicTacToe.Models;
+using TicTacToe.Models.BoardNS;
 
-namespace TicTacToe.MVC.ViewNS
+namespace TicTacToe.Views
 {
     public sealed class BoardDrawer
     {
-        private readonly IBoard _board;
+        private readonly Board _board;
 
-        public BoardDrawer(IBoard board)
+        public BoardDrawer(Board board)
         {
             _board = board;
         }
@@ -36,13 +38,13 @@ namespace TicTacToe.MVC.ViewNS
         {
             for (int row = 0; row < _board.Rows; row++)
             {
-                ImmutableArray<IPlayer?> players = _board.GetRow(row).ToImmutableArray();
+                ImmutableArray<Player?> players = _board.GetRow(row).ToImmutableArray();
 
                 Console.Write(" ");
 
                 for (int i = 0; i < players.Length; i++)
                 {
-                    IPlayer? player = players[i];
+                    Player? player = players[i];
 
                     Console.Write(player?.ToString() ?? " ");
 

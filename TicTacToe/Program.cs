@@ -1,6 +1,7 @@
-﻿using TicTacToe.MVC.ControllerNS;
-using TicTacToe.MVC.ModelNS;
-using TicTacToe.MVC.ViewNS;
+﻿using TicTacToe.Controllers;
+using TicTacToe.Models;
+using TicTacToe.Models.BoardNS;
+using TicTacToe.Views;
 
 namespace TicTacToe
 {

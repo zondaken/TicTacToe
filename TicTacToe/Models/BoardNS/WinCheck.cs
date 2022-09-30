@@ -1,26 +1,25 @@
 ﻿using System.Diagnostics;
-using TicTacToe;
 
-namespace TicTacToe
+namespace TicTacToe.Models.BoardNS
 {
-    public class WinCheck : IWinCheck
+    public class WinCheck
     {
-        private readonly IBoard _board;
+        private readonly Board _board;
 
-        public WinCheck(IBoard board)
+        public WinCheck(Board board)
         {
             _board = board;
 
             Debug.Assert(_board.Rows == _board.Cols);
         }
 
-        public bool HasWon(out IPlayer? player)
+        public bool HasWon(out Player? player)
         {
             player = null;
 
             for (int row = 0; row < _board.Rows; row++)
             {
-                IPlayer? currentPlayer = _board[0];
+                Player? currentPlayer = _board[0];
                 if (currentPlayer == null) continue;
                 
                 for (int col = 1; col < _board.Cols; col++)
