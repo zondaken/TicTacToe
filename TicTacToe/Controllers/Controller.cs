@@ -39,6 +39,7 @@ public class Controller
         }
     }
 
+    // input is string because of view independency, so that multiple views dont need to parse altogether (it happens in one place by passing a normalized value into the event)
     private void OnInputSubmitted(string input)
     {
         // input is defined as the new tile to mark for a player (X or O, depending on current player)
