@@ -39,6 +39,8 @@ public class Controller
 
     private void OnInputSubmitted(string input)
     {
+        // input is defined as the new tile to mark for a player (X or O)
+        
         int iPosition = int.Parse(input);
         if (iPosition < 0 || iPosition >= _model.Board.Count) return;
 
