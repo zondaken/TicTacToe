@@ -20,9 +20,10 @@ public class Controller
 
     public void Run()
     {
-        // Game loop
+        // game loop
         while (true)
         {
+            // render
             _view.Render();
 
             // win
