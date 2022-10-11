@@ -30,6 +30,8 @@ public class Controller
             if (_model.Board.CheckWin(out Player? player))
             {
                 Debug.Assert(player != null); // if check returns true, player will be non-null
+                // TODO: make win screen
+                break;
             }
             
             // tie
