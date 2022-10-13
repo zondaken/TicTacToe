@@ -15,8 +15,21 @@ namespace TicTacToe.Models.BoardNS
 
         public bool HasWon(out Player? player)
         {
-            player = null;
+            if (HasHorizontalWinner(out player))
+                return true;
 
+            if (HasVerticalWinner(out player))
+                return true;
+
+            if (HasDiagonalWinner(out player))
+                return true;
+
+            //player = null;
+            return false;
+        }
+
+        public bool HasHorizontalWinner(out Player? player)
+        {
             for (int row = 0; row < _board.Rows; row++)
             {
                 Player? currentPlayer = _board[0];
@@ -38,6 +51,43 @@ namespace TicTacToe.Models.BoardNS
                 }
             }
 
+            player = null;
+            return false;
+        }
+
+        public bool HasVerticalWinner(out Player? player)
+        {
+            // TODO: implement logic
+
+            player = null;
+            return false;
+        }
+
+        public bool HasDiagonalWinner(out Player? player)
+        {
+            if (HasTopLeftToBottomRightWinner(out player))
+                return true;
+            
+            if (HasBottomLeftToTopRightWinner(out player))
+                return true;
+
+            player = null;
+            return false;
+        }
+
+        public bool HasTopLeftToBottomRightWinner(out Player? player)
+        {
+            // TODO: implement logic
+
+            player = null;
+            return false;
+        }
+
+        public bool HasBottomLeftToTopRightWinner(out Player? player)
+        {
+            // TODO: implement logic
+
+            player = null;
             return false;
         }
     }

@@ -11,6 +11,8 @@ namespace TicTacToe.Models
 
         public Model()
         {
+            // TOOD: Konfiguration maybe von aussen?
+
             Players = new Player[]
             {
                 new Player("X"),

@@ -10,6 +10,7 @@ namespace TicTacToe.Controllers
         private readonly Model _model;
         private readonly View _view;
 
+
         public Controller(Model model, View view)
         {
             _model = model;
@@ -20,18 +21,23 @@ namespace TicTacToe.Controllers
 
         public void Run()
         {
+            // game loop
             while (true)
             {
+                // render
                 _view.Render();
 
                 // win
                 if (_model.Board.CheckWin(out Player? player))
                 {
                     Debug.Assert(player != null); // if check returns true, player will be non-null
+                    // TODO: make win screen
+                    break;
                 }
 
                 // tie
-                if (_model.TurnCount >= _model.Board.Count) break;
+                if (_model.TurnCount >= _model.Board.Count)
+                    break;
             }
         }
 
