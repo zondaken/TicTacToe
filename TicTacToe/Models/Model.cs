@@ -1,20 +1,21 @@
 ﻿using TicTacToe.Models.BoardNS;
 
-namespace TicTacToe.Models;
-
-public class Model
+namespace TicTacToe.Models
 {
-    public Board Board { get; set; } = null!;
-    public int TurnCount { get; set; } = 0;
-    public Player[] Players { get; }
-    public int CurrentPlayer { get; set; } = 0;
-    
-    public Model()
+    public class Model
     {
-        Players = new Player[]
+        public Board Board { get; set; } = null!;
+        public int TurnCount { get; set; } = 0;
+        public Player[] Players { get; }
+        public int CurrentPlayer { get; set; } = 0;
+
+        public Model()
         {
-            new Player("X"), 
-            new Player("O")
-        };
+            Players = new Player[]
+            {
+                new Player("X"),
+                new Player("O")
+            };
+        }
     }
 }
